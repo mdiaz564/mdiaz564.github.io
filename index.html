@@ -1,1 +1,131 @@
-hello, world
+<html>
+  <head>
+    <title>Maritza</title>
+    <meta charset="utf-8">
+    <style>
+      body{
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #004643;
+        display:flex;
+        justify-content: center;
+        Font-Family: 'Lato', Sans-Serif;
+        Font-Size: 16px;
+      }
+      .banner-image{
+        width:128px;
+        height:128px;
+        object-fit: cover;
+        border-radius: 128px;
+      }
+      .thumbnails{
+        width: 48px;
+        height: 48px;
+        border-radius: 48px;
+        object-fit: cover;
+      }
+      .profile_name{
+        color:#fffffe;
+        display:flex;
+        justify-content: center;
+      }
+      .social-icons a {
+        color:#fffffe;
+        text-decoration:none;
+      }
+      .link{
+        background-color: #f9bc60;
+        display:flex;
+        align-items: center;
+        padding:5px;
+        border-radius: 15px;
+      }
+      .link a {
+        color:#001e1d;
+        text-decoration:none;
+        text-align:center;
+        flex-grow: 1;
+      }
+      .items{
+        display:flex;
+        flex-direction:column;
+        gap:30px;
+        max-width:640px;
+        flex-grow:1;
+      }
+      /**{
+        border:thin red solid;
+      }*/
+      .banner{
+        display:flex;
+        justify-content: center;
+      }
+      .social-icons{
+        display:flex;
+        justify-content: space-around;
+      }
+      .profile_name{
+        Font-Family: 'Arvo', Serif;
+        Font-Size: 44px;
+      }
+      .background--custom {
+        background-color: #FDF8F9;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        overflow: hidden;
+        z-index: -2;
+        top: 0;
+        left: 0;
+      }
+      canvas#canvas {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: rotate(0deg) scale(2) translateY(0%);
+        --gradient-color-1: #F9BC60; 
+        --gradient-color-2: #6FAED3; 
+        --gradient-color-3: #68BD58;  
+        --gradient-color-4: #FA829B;
+        --gradient-speed: 0.000019999999999999998;
+      }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Arvo|Lato" rel="stylesheet">
+  </head>
+  <body>
+    <div class="items">
+      <div class="banner">
+        <img src="/images/mdiaz.JPG" alt="bear" class="banner-image">
+      </div>
+    
+      <div class="profile_name">
+        <p>Maritza Diaz</p>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/maritza-diaz-bb94b4238/" target="_blank">
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+       </a>
+        <a href="https://github.com/mdiaz564" target="_blank">
+          <i class="fa-brands fa-github"></i>Github
+        </a>
+      </div>
+
+      <div class="link">
+        <img src="/images/water.jpeg" alt="water" class="thumbnails">
+        <a href="https://www.nytimes.com/2016/01/10/magazine/the-lawyer-who-became-duponts-worst-nightmare.html" target="_blank">The Lawyer Who Became Duponts Worst Nightmare- Nathaniel Rich</a>
+      </div>
+    </div>
+    <div class="background--custom">
+      <canvas id="canvas" />
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/greentfrapp/pocoloco@minigl/minigl.js"></script>
+    <script>
+    var gradient = new Gradient();
+    gradient.initGradient("#canvas");
+    </script>
+  </body>
+</html>
